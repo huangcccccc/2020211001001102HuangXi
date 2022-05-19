@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="2020211001001102HuangXi:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/2020211001001102HuangXi_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="2020211001001102HuangXi" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="2020211001001102HuangXi/web/Web" />
+    </root>
+  </artifact>
+</component>
