@@ -1,22 +1,30 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 黄CC
-  Date: 2022/5/19
-  Time: 16:32
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+//.println(basePath);
+%>
 <html>
 <head>
-    <title></title>
+    <title>MyJsp</title>
+    <style>
+        form div {
+            margin: 10px 0;
+        }
+        input {
+            outline: none;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-<!-- /2020211001001102HuangXi_war_exploded/my -->
-<form method="post" action="Mydearjsp.jsp">
-    Name:<input name="name" type="text" size="20"><br>
-    Class:<input name="classname" type="text" size="20"><br>
-    Id:<input name="id" type="text" size="20"><br>
-    <input name="send" type="submit" size="10" value="send data to server">
+<%--action="<%=basePath%>MyDear" or action="MyDearJsp.jsp"--%>
+<form method="post" action="MyDearJsp.jsp" style="width: 20%; height: auto; background:linear-gradient(to top, #2980b9, #6dd5fa, #ffffff); display: flex; flex-direction: column;  align-items: center; border-radius: 5px; border: 1px solid darkgray;">
+    <div>I am MyJsp.jsp</div>
+    <div><label for="name">name:</label><input id="name" name="name" type="text" required></div>
+    <div><label for="clas">class:</label><input id="clas" name="clas" type="text" required></div>
+    <div><label for="ID">ID:</label><input id="ID" name="ID" type="text" required></div>
+    <div><input name="submit" type="submit" value="Send data to server"></div>
 </form>
 </body>
 </html>

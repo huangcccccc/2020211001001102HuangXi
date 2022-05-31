@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-         version="4.0">
+<web-app>
 
 <context-param>
     <param-name>driver</param-name>
@@ -60,8 +57,25 @@
 <!--<filter-mapping>-->
 <!--    <filter-name>LoggerFilter</filter-name>-->
 <!--    <url-pattern>/hello-selvet</url-pattern>-->
-<!--</filter-mapping>-->
-<listener>
+<!--</filter-mapping>-->]
+    <filter>
+        <filter-name>YourNameFilter</filter-name>
+        <filter-class>com.huangxi.lab2.HuangXiFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>YourNameFilter</filter-name>
+        <url-pattern>/lab2/validate.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.huangxi.lab2.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/lab2/validate.jsp</url-pattern>
+    </filter-mapping>
+
+    <listener>
     <listener-class>com.huangxi.week6.JDBCServletContextListener</listener-class>
    </listener>
 <!--
